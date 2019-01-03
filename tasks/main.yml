@@ -1,0 +1,23 @@
+---
+# tasks file for locale
+- name: test veriables and environment
+  assert:
+    that:
+      - locale_package_state is defined
+      - locale_package_state == "present" or
+        locale_package_state == "latest" or
+        locale_package_state == "absent"
+      - locale_lang is defined
+
+# - name: install locale
+#   package:
+#     name: "{{ locale_packages }}"
+#     state: "{{ locale_package_state }}"
+#   register: locale_install_locale
+#   until: locale_install_locale is succeeded
+#   retries: 3
+
+- name: configure locale
+  template:
+    src: "{{ locale_config_file }}.j2"
+    dest: "{{ locale_config_directory }}/{{ locale_config_file }}"
