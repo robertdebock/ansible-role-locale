@@ -23,3 +23,8 @@ locale_lc_time: "{{ locale_lang }}"
 
 # To update packages this role places on the system, set `locale_package_state` to `latest`.
 locale_package_state: present
+
+# Some Docker containers do not allow managing services, rebooting and writing
+# to some locations in /etc. The role skips tasks that will typically fail in
+# Docker. With this parameter you can tell the role to -not- skip these tasks.
+locale_ignore_docker: yes

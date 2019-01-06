@@ -9,14 +9,6 @@
         locale_package_state == "absent"
       - locale_lang is defined
 
-# - name: install locale
-#   package:
-#     name: "{{ locale_packages }}"
-#     state: "{{ locale_package_state }}"
-#   register: locale_install_locale
-#   until: locale_install_locale is succeeded
-#   retries: 3
-
 - name: configure locale
   template:
     src: "{{ locale_config_file }}.j2"

@@ -1,15 +1,5 @@
 ---
 # vars file for locale
-_locale_packages:
-  default:
-    - locales
-  CentOS:
-    - locales
-  CentOS-7:
-    - locales
-
-locale_packages: "{{ _locale_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_locale_packages[ansible_distribution] | default(_locale_packages['default'])) }}"
-
 _locale_config_directory:
   default: /etc
 
