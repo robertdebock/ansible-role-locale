@@ -1,0 +1,4 @@
+---
+# handlers file for locale
+- name: localectl set-locale
+  command: localectl set-locale LANG={{ locale_lang }}

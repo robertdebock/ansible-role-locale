@@ -21,3 +21,5 @@
   template:
     src: "{{ locale_config_file }}.j2"
     dest: "{{ locale_config_directory }}/{{ locale_config_file }}"
+  notify:
+    - localectl set-locale
