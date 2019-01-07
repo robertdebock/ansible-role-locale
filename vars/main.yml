@@ -10,4 +10,4 @@ _locale_requirements:
   Ubuntu:
     - locales-all
 
-locale_requirements: "{{ __locale_requirements[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default (_locale_requirements[ansible_distribution] | default(_locale_requirements['default'])) }}"
+locale_requirements: "{{ _locale_requirements[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_locale_requirements[ansible_distribution] | default(_locale_requirements['default'])) }}"
