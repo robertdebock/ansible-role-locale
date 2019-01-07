@@ -2,9 +2,7 @@
 # vars file for locale
 _locale_requirements:
   default: []
-  CentOS-6: []
-  CentOS-7:
-    - langpacks-en
+  CentOS: []
   Debian:
     - locales-all
   Fedora:
