@@ -17,9 +17,18 @@
   until: locale_install_requirements is succeeded
   retries: 3
 
-- name: configure locale
+- name: configure locale.conf
   template:
-    src: "{{ locale_config_file }}.j2"
-    dest: "{{ locale_config_directory }}/{{ locale_config_file }}"
+    src: locale.conf.j2
+    dest: /etc/locale.conf
   notify:
     - localectl set-locale
+
+- name: configure il8n
+  lineinfile:
+    path: /etc/sysconfig/i18n
+    regexp: '^LANG='
+    line: 'LANG="{{ locale_lang }}"'
+  when:
+    - ansible_distribution == "CentOS"
+    - ansible_distribution_major_version == 6

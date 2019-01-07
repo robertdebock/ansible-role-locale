@@ -2,7 +2,8 @@
 # vars file for locale
 _locale_requirements:
   default: []
-  CentOS:
+  CentOS-6: []
+  CentOS-7:
     - langpacks-en
   Debian:
     - locales-all
@@ -11,11 +12,4 @@ _locale_requirements:
   Ubuntu:
     - locales-all
 
-locale_requirements: "{{ _locale_requirements[ansible_distribution] | default(_locale_requirements['default']) }}"
-
-_locale_config_directory:
-  default: /etc
-
-locale_config_directory: "{{ _locale_config_directory[ansible_distribution] | default(_locale_config_directory['default']) }}"
-
-locale_config_file: locale.conf
+locale_requirements: "{{ __locale_requirements[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default (_locale_requirements[ansible_distribution] | default(_locale_requirements['default'])) }}"
