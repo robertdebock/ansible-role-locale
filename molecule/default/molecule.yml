@@ -34,8 +34,10 @@ platforms:
     image: opensuse:leap
   - name: locale-opensuse-tumbleweed
     image: opensuse:tumbleweed
-  - name: locale-ubuntu-artful
-    image: ubuntu:artful
+  - name: locale-ubuntu-latest
+    image: ubuntu:latest
+  - name: locale-ubuntu-rolling
+    image: ubuntu:rolling
   - name: locale-ubuntu-devel
     image: ubuntu:devel
 provisioner:
