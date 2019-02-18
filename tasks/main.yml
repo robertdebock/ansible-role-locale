@@ -20,7 +20,7 @@
 - name: configure locale.conf
   template:
     src: locale.conf.j2
-    dest: /etc/locale.conf
+    dest: "{{ locale_configuration_file }}"
   notify:
     - localectl set-locale
 
