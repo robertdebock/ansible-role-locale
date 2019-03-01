@@ -32,8 +32,6 @@ platforms:
     image: fedora:rawhide
   - name: locale-opensuse-leap
     image: opensuse:leap
-  - name: locale-opensuse-tumbleweed
-    image: opensuse:tumbleweed
   - name: locale-ubuntu-latest
     image: ubuntu:latest
   - name: locale-ubuntu-rolling
