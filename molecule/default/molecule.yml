@@ -3,10 +3,10 @@ dependency:
   name: galaxy
   options:
     role-file: requirements.yml
-driver:
-  name: docker
 lint:
   name: yamllint
+driver:
+  name: docker
 platforms:
   - name: locale-alpine-edge
     image: alpine:edge
@@ -38,19 +38,11 @@ platforms:
     image: ubuntu:rolling
   - name: locale-ubuntu-devel
     image: ubuntu:devel
+  - name: locale-ubuntu-latest
+    image: ubuntu:latest
 provisioner:
   name: ansible
-  inventory:
-    group_vars:
-      all:
-        locale_ignore_docker: no
-    host_vars:
-      locale-fedora-rawhide:
-        ansible_python_interpreter: /usr/bin/python3
   lint:
     name: ansible-lint
-  config_options:
-    defaults:
-      callback_plugins: /usr/lib/python2.7/site-packages/ara/plugins/callbacks
 scenario:
   name: default

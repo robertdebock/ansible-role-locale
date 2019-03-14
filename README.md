@@ -19,7 +19,6 @@ This example is taken from `molecule/default/playbook.yml`:
   roles:
     - role: robertdebock.bootstrap
     - role: robertdebock.locale
-
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
@@ -51,15 +50,6 @@ locale_lc_paper: "{{ locale_lang }}"
 locale_lc_response: "{{ locale_lang }}"
 locale_lc_telephone: "{{ locale_lang }}"
 locale_lc_time: "{{ locale_lang }}"
-
-# To update packages this role places on the system, set `locale_package_state` to `latest`.
-locale_package_state: present
-
-# Some Docker containers do not allow managing services, rebooting and writing
-# to some locations in /etc. The role skips tasks that will typically fail in
-# Docker. With this parameter you can tell the role to -not- skip these tasks.
-locale_ignore_docker: yes
-
 ```
 
 Requirements

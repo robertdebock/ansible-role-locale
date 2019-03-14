@@ -3,16 +3,12 @@
 - name: test veriables and environment
   assert:
     that:
-      - locale_package_state is defined
-      - locale_package_state == "present" or
-        locale_package_state == "latest" or
-        locale_package_state == "absent"
       - locale_lang is defined
 
 - name: install requirements
   package:
     name: "{{ locale_requirements }}"
-    state: "{{ locale_package_state }}"
+    state: present
   register: locale_install_requirements
   until: locale_install_requirements is succeeded
   retries: 3
