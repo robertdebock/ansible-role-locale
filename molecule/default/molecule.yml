@@ -59,5 +59,11 @@ provisioner:
     converge: ../resources/playbook.yml
   lint:
     name: ansible-lint
+  inventory:
+    host_vars:
+      locale-fedora-latest:
+        ansible_python_interpreter: /usr/bin/python3
+      locale-fedora-rawhide:
+        ansible_python_interpreter: /usr/bin/python3
 scenario:
   name: default
