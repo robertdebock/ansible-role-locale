@@ -39,7 +39,6 @@ galaxy_info:
     - locale
     - archlinux
     - centos
-    - opensuse
     - rhel
     - ubuntu
 
