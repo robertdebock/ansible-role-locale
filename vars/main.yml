@@ -2,8 +2,6 @@
 # vars file for locale
 _locale_requirements:
   default: []
-  Archlinux:
-    - bash
   CentOS: []
   Debian:
     - locales-all
