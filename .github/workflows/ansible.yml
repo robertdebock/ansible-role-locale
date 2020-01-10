@@ -31,10 +31,6 @@ jobs:
         config:
           - image: "amazonlinux"
             tag: "latest"
-          - image: "alpine"
-            tag: "latest"
-          - image: "alpine"
-            tag: "edge"
           - image: "debian"
             tag: "latest"
           - image: "debian"

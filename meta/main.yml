@@ -10,10 +10,7 @@ galaxy_info:
   platforms:
     - name: Amazon
       versions:
-        - 2
-    - name: Alpine
-      versions:
-        - all
+        - Candidate
     - name: Debian
       versions:
         - all
