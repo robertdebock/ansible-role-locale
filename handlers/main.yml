@@ -4,5 +4,6 @@
   command: localectl set-locale LANG={{ locale_lang }}
   when:
     - ansible_virtualization_type != "docker"
+    - ansible_virtualization_type != "container"
     - ansible_distribution != "Ubuntu"
     - ansible_distribution  != "Debian"
