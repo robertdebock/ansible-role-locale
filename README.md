@@ -17,7 +17,7 @@ This example is taken from `molecule/resources/converge.yml` and is tested on ea
   gather_facts: yes
 
   roles:
-    - robertdebock.locale
+    - role: robertdebock.locale
 ```
 
 The machine may need to be prepared using `molecule/resources/prepare.yml`:
@@ -101,7 +101,6 @@ This role has been tested on these [container images](https://hub.docker.com/):
 
 |container|tags|
 |---------|----|
-|amazon|Candidate|
 |debian|all|
 |el|7, 8|
 |fedora|all|
