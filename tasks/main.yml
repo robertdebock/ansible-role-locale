@@ -1,5 +1,8 @@
 ---
 # tasks file for locale
+- name: include assert.yml
+  include_tasks: assert.yml
+
 - name: install requirements
   package:
     name: "{{ locale_requirements }}"
