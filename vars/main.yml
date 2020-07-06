@@ -1,5 +1,6 @@
 ---
 # vars file for locale
+
 _locale_requirements:
   default: []
   CentOS: []
