@@ -7,9 +7,6 @@
   package:
     name: "{{ locale_requirements }}"
     state: present
-  register: locale_install_requirements
-  until: locale_install_requirements is succeeded
-  retries: 3
 
 - name: configure locale.conf
   template:
