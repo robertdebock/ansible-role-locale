@@ -73,6 +73,8 @@ locale_lc_paper: "{{ locale_lang }}"
 locale_lc_response: "{{ locale_lang }}"
 locale_lc_telephone: "{{ locale_lang }}"
 locale_lc_time: "{{ locale_lang }}"
+
+locale_timezone: Europe/Amsterdam
 ```
 
 ## [Requirements](#requirements)

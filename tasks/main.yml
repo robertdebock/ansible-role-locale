@@ -14,3 +14,7 @@
     dest: "{{ locale_configuration_file }}"
   notify:
     - localectl set-locale
+
+- name: set timezone
+  timezone:
+    name: "{{ locale_timezone }}"

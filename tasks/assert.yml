@@ -110,3 +110,10 @@
       - locale_lc_time is defined
       - locale_lc_time | length > 0
     quiet: yes
+
+- name: test if locale_timezone is set correctly
+  assert:
+    that:
+      - locale_timezone is defined
+      - locale_timezone | length > 0
+    quiet: yes
