@@ -3,6 +3,8 @@
 
 _locale_requirements:
   default: []
+  Amazon:
+    - util-linux
   CentOS: []
   Debian:
     - locales-all
