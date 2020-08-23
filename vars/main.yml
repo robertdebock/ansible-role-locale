@@ -7,15 +7,13 @@ _locale_requirements:
     - tzdata
   Amazon:
     - util-linux
-  CentOS: []
   Debian:
     - locales-all
+    - tzdata
   Fedora:
     - langpacks-en
   Suse:
     - tzdata
-  Ubuntu:
-    - locales-all
 
 locale_requirements: "{{ _locale_requirements[ansible_distribution] | default (_locale_requirements[ansible_os_family | default(_locale_requirements['default'])) }}"
 
