@@ -12,6 +12,7 @@
   template:
     src: locale.conf.j2
     dest: "{{ locale_configuration_file }}"
+    mode: "0644"
   notify:
     - localectl set-locale
 
