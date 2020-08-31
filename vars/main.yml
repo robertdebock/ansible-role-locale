@@ -13,7 +13,7 @@ _locale_requirements:
   Fedora:
     - langpacks-en
   Suse:
-    - tzdata
+    - timezone
 
 locale_requirements: "{{ _locale_requirements[ansible_distribution] | default(_locale_requirements[ansible_os_family] | default(_locale_requirements['default'])) }}"
 
