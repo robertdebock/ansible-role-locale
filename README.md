@@ -4,7 +4,7 @@ Configure locale on your system.
 
 |Travis|GitHub|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-locale.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-locale)|[![github](https://github.com/robertdebock/ansible-role-locale/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-locale/actions)|[![quality](https://img.shields.io/ansible/quality/35991)](https://galaxy.ansible.com/robertdebock/locale)|[![downloads](https://img.shields.io/ansible/role/d/35991)](https://galaxy.ansible.com/robertdebock/locale)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-locale.svg)](https://github.com/robertdebock/ansible-role-locale/releases/)|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-locale.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-locale)|[![github](https://github.com/robertdebock/ansible-role-locale/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-locale/actions)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/robertdebock/locale)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/robertdebock/locale)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-locale.svg)](https://github.com/robertdebock/ansible-role-locale/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -103,7 +103,6 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 
 |container|tags|
 |---------|----|
-|alpine|all|
 |amazon|2018.03|
 |el|7, 8|
 |debian|buster, bullseye|
