@@ -34,7 +34,5 @@ galaxy_info:
 
   galaxy_tags:
     - locale
-    - centos
-    - redhat
 
 dependencies: []
