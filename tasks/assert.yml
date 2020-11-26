@@ -1,4 +1,5 @@
 ---
+
 - name: test if locale_lang is set correctly
   assert:
     that:
