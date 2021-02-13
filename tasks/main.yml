@@ -20,5 +20,5 @@
     - localectl set-locale
 
 - name: set timezone
-  timezone:
+  community.general.timezone:
     name: "{{ locale_timezone }}"
