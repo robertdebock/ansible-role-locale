@@ -2,17 +2,17 @@
 # tasks file for locale
 
 - name: include assert.yml
-  import_tasks: assert.yml
+  ansible.builtin.import_tasks: assert.yml
   run_once: yes
   delegate_to: localhost
 
 - name: install requirements
-  package:
+  ansible.builtin.package:
     name: "{{ locale_requirements }}"
     state: present
 
 - name: configure locale.conf
-  template:
+  ansible.builtin.template:
     src: locale.conf.j2
     dest: "{{ locale_configuration_file }}"
     mode: "0644"

@@ -2,7 +2,7 @@
 # handlers file for locale
 
 - name: localectl set-locale
-  command: localectl set-locale LANG={{ locale_lang }}
+  ansible.builtin.command: localectl set-locale LANG={{ locale_lang }}
   when:
     - ansible_connection != "docker"
     - ansible_distribution != "Ubuntu"
