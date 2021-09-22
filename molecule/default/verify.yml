@@ -2,12 +2,17 @@
 - name: Verify
   hosts: all
   become: yes
-  gather_facts: no
+  gather_facts: yes
+
+  vars_files:
+    ../../vars/main.yml
 
   tasks:
     - name: check if locale has been set
-      command:
-        cmd: locale
+      lineinfile:
+        dest: "{{ locale_configuration_file }}"
+        line: 'LANG="de_AT.UTF-8"'
+      check_mode: yes
       register: locale_test_one
       failed_when:
-        - '"de_AT.UTF-8" not in locale_test_one.stdout'
+        - locale_test_one is changed
