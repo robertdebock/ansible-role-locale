@@ -5,5 +5,9 @@
   gather_facts: no
 
   tasks:
-    - name: check if connection still works
-      ansible.builtin.ping:
+    - name: check if locale has been set
+      command:
+        cmd: locale
+      register: locale_test_one
+      failed_when:
+        - '"de_AT.UTF-8" not in locale_test_one.stdout'
