@@ -3,7 +3,6 @@
 
 - name: localectl set-locale
   ansible.builtin.command:
-    cmd: localectl set-locale LANG={{ locale_lang }}
+    cmd: "{{ locale_notify_command }}"
   when:
     - ansible_connection not in [ "container", "docker", "community.docker.docker" ]
-    - ansible_distribution not in [ "Debian", "Ubunutu" ]
