@@ -106,6 +106,10 @@ The minimum version of Ansible required is 2.10, tests have been done to:
 
 If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-locale/issues)
 
+## [Hints](#hints)
+
+Depending on its configuration, SSH allows transmission of locale variables. Thus it is possible that when a remote host is accessed via SSH, it appears to use the same locale as the host accessing it. However this does not imply the remote locale was not set properly. In case you encounter this behavior, try to login to your remote host using VNC, or if not available, elevate yourself to any other remote user and check the locale again. More information about this behavior can be found in this [issue](https://github.com/robertdebock/ansible-role-locale/issues/3).
+
 ## [License](#license)
 
 Apache-2.0
