@@ -9,7 +9,7 @@
 
   tasks:
     - name: check if locale has been set
-      lineinfile:
+      ansible.builtin.lineinfile:
         dest: "{{ locale_configuration_file }}"
         line: 'LANG="de_AT.UTF-8"'
       check_mode: yes
