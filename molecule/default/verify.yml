@@ -11,7 +11,7 @@
     - name: check if locale has been set
       ansible.builtin.lineinfile:
         dest: "{{ locale_configuration_file }}"
-        line: 'LANG="de_AT.UTF-8"'
+        line: 'LANG=de_AT.UTF-8'
       check_mode: yes
       register: locale_test_one
       failed_when:
