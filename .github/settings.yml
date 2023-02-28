@@ -5,4 +5,4 @@
 repository:
   description: Configure locale on your system.
   homepage: https://robertdebock.nl/
-  topics: locale, ansible, molecule, tox, playbook, hacktoberfest
+  topics: locale, ansible, molecule, tox, playbook
