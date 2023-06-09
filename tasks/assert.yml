@@ -5,6 +5,7 @@
     that:
       - locale_lang is defined
       - locale_lang is string
+      - locale_lang is not none
     quiet: yes
 
 - name: assert | Test if locale_language is set correctly
@@ -12,6 +13,7 @@
     that:
       - locale_language is defined
       - locale_language is string
+      - locale_language is not none
     quiet: yes
 
 - name: assert | Test if locale_lc_address is set correctly
@@ -19,6 +21,7 @@
     that:
       - locale_lc_address is defined
       - locale_lc_address is string
+      - locale_lc_address is not none
     quiet: yes
 
 - name: assert | Test if locale_lc_all is set correctly
@@ -26,6 +29,7 @@
     that:
       - locale_lc_all is defined
       - locale_lc_all is string
+      - locale_lc_all is not none
     quiet: yes
 
 - name: assert | Test if locale_lc_collate is set correctly
@@ -33,6 +37,7 @@
     that:
       - locale_lc_collate is defined
       - locale_lc_collate is string
+      - locale_lc_collate is not none
     quiet: yes
 
 - name: assert | Test if locale_lc_ctype is set correctly
@@ -40,6 +45,7 @@
     that:
       - locale_lc_ctype is defined
       - locale_lc_ctype is string
+      - locale_lc_ctype is not none
     quiet: yes
 
 - name: assert | Test if locale_lc_identification is set correctly
@@ -47,6 +53,7 @@
     that:
       - locale_lc_identification is defined
       - locale_lc_identification is string
+      - locale_lc_identification is not none
     quiet: yes
 
 - name: assert | Test if locale_lc_measurement is set correctly
@@ -54,6 +61,7 @@
     that:
       - locale_lc_measurement is defined
       - locale_lc_measurement is string
+      - locale_lc_measurement is not none
     quiet: yes
 
 - name: assert | Test if locale_lc_messages is set correctly
@@ -61,6 +69,7 @@
     that:
       - locale_lc_messages is defined
       - locale_lc_messages is string
+      - locale_lc_messages is not none
     quiet: yes
 
 - name: assert | Test if locale_lc_monetary is set correctly
@@ -68,6 +77,7 @@
     that:
       - locale_lc_monetary is defined
       - locale_lc_monetary is string
+      - locale_lc_monetary is not none
     quiet: yes
 
 - name: assert | Test if locale_lc_name is set correctly
@@ -75,6 +85,7 @@
     that:
       - locale_lc_name is defined
       - locale_lc_name is string
+      - locale_lc_name is not none
     quiet: yes
 
 - name: assert | Test if locale_lc_numeric is set correctly
@@ -82,6 +93,7 @@
     that:
       - locale_lc_numeric is defined
       - locale_lc_numeric is string
+      - locale_lc_numeric is not none
     quiet: yes
 
 - name: assert | Test if locale_lc_paper is set correctly
@@ -89,6 +101,7 @@
     that:
       - locale_lc_paper is defined
       - locale_lc_paper is string
+      - locale_lc_paper is not none
     quiet: yes
 
 - name: assert | Test if locale_lc_response is set correctly
@@ -96,6 +109,7 @@
     that:
       - locale_lc_response is defined
       - locale_lc_response is string
+      - locale_lc_response is not none
     quiet: yes
 
 - name: assert | Test if locale_lc_telephone is set correctly
@@ -103,6 +117,7 @@
     that:
       - locale_lc_telephone is defined
       - locale_lc_telephone is string
+      - locale_lc_telephone is not none
     quiet: yes
 
 - name: assert | Test if locale_lc_time is set correctly
@@ -110,6 +125,7 @@
     that:
       - locale_lc_time is defined
       - locale_lc_time is string
+      - locale_lc_time is not none
     quiet: yes
 
 - name: assert | Test if locale_timezone is set correctly
@@ -117,4 +133,5 @@
     that:
       - locale_timezone is defined
       - locale_timezone is string
+      - locale_timezone is not none
     quiet: yes
