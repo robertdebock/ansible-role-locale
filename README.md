@@ -1,4 +1,4 @@
-# Ansible role [locale](#locale)
+# [Ansible role locale](#locale)
 
 Configure locale on your system.
 
