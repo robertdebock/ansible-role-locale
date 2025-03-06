@@ -5,5 +5,5 @@
   gather_facts: true
 
   roles:
-    - role: ansible-role-locale
+    - role: robertdebock.locale
       locale_lang: de_AT.UTF-8
